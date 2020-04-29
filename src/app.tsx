@@ -9,24 +9,19 @@ import nodeguiIcon from "../assets/nodegui.jpg";
 const minSize = { width: 500, height: 520 };
 const winIcon = new QIcon(path.resolve(__dirname, nodeguiIcon));
 class App extends React.Component {
-  render() {
-    return (
-      <Window
-        windowIcon={winIcon}
-        windowTitle="Hello 👋🏽"
-        minSize={minSize}
-        styleSheet={styleSheet}
-      >
-        <View style={containerStyle}>
-          <Text id="welcome-text">Welcome to NodeGui 🐕</Text>
-          <Text id="step-1">1. Play around</Text>
-          <StepOne />
-          <Text id="step-2">2. Debug</Text>
-          <StepTwo />
-        </View>
-      </Window>
-    );
-  }
+    render() {
+        return (
+            <Window windowIcon={winIcon} windowTitle="Hello 👋🏽" minSize={minSize} styleSheet={styleSheet}>
+                <View style={containerStyle}>
+                    <Text id="welcome-text">Welcome to NodeGui 🐕</Text>
+                    <Text id="step-1">1. Play around</Text>
+                    <StepOne />
+                    <Text id="step-2">2. Debug</Text>
+                    <StepTwo />
+                </View>
+            </Window>
+        );
+    }
 }
 
 const containerStyle = `
